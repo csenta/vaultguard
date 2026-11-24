@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  vaultguard:
+    build: .
+    container_name: vaultguard
+    volumes:
+      - ./examples:/app/examples
+      - ./reports:/app/reports
+    command: ["scan", "--path", "examples/sample_repo", "--simulate", "--output-html", "reports/audit.html"]

@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
+*.log
+report.json
+report.html
+purge_git_history.sh
+.env.example
