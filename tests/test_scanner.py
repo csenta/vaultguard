@@ -1,11 +1,13 @@
 import unittest
 from vaultguard.core.models import SecretType
 from vaultguard.core.scanner import SecretScanner
+import os
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class TestSecretScanner(unittest.TestCase):
     def setUp(self):
-        self.sample_dir = "/home/emprogue/Projects/vaultguard/examples/sample_repo"
+        self.sample_dir = os.path.join(_ROOT, "examples", "sample_repo")
 
     def test_scan_directory(self):
         files_scanned, secrets = SecretScanner.scan_path(self.sample_dir)

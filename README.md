@@ -1,8 +1,10 @@
 # VaultGuard 🔐
 
+> **Status:** prototype. A personal security-research project, not a production product. Expect rough edges; issues and pull requests are welcome.
+
 > **Autonomous Secret & API Key Leakage Remediator with Proof-of-Revocation & Live Key Verification**
 
-VaultGuard is an enterprise-grade credential security and secret remediation engine. It scans codebases, git commit trees, configuration manifests, and environment files for leaked credentials, validates candidate randomness with Shannon entropy, verifies active vs revoked credential status safely, and synthesizes automated rotation playbooks, `.env` isolation templates, and git history rewrite scripts.
+VaultGuard is a prototype credential security and secret remediation engine. It scans codebases, git commit trees, configuration manifests, and environment files for leaked credentials, validates candidate randomness with Shannon entropy, verifies active vs revoked credential status safely, and synthesizes automated rotation playbooks, `.env` isolation templates, and git history rewrite scripts.
 
 ---
 
@@ -104,3 +106,7 @@ Run with Docker Compose:
 ```bash
 docker-compose up --build
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).

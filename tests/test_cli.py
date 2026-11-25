@@ -3,11 +3,12 @@ import os
 import tempfile
 import unittest
 from vaultguard.cli import handle_purge, handle_remediate, handle_scan
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class TestCLI(unittest.TestCase):
     def setUp(self):
-        self.sample_dir = "/home/emprogue/Projects/vaultguard/examples/sample_repo"
+        self.sample_dir = os.path.join(_ROOT, "examples", "sample_repo")
 
     def test_cli_scan(self):
         with tempfile.NamedTemporaryFile(delete=False, suffix=".json") as f_json:
